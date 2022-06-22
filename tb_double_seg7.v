@@ -1,7 +1,7 @@
 `timescale 1ns/1ns
 module tb_double_seg7 ();
     reg[6:0] data_in;
-    wire[3:0] out10, out01;
+    wire[6:0] out10, out01;
     double_seg7 u0 (data_in,out10,out01);
     initial
     begin

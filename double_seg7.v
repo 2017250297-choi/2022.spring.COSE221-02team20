@@ -5,9 +5,9 @@ module double_seg7 (
 );
     input [6:0]data_in;
     output[6:0] seg10 , seg01;
-    reg[3:0] ten, one;
-    seg7 s10 (ten,seg10);
-    seg7 s01 (one,seg01);
+    reg[6:0] ten, one;
+    seg7 s10 (ten[3:0],seg10);
+    seg7 s01 (one[3:0],seg01);
     always @ (data_in)
     begin
         ten <=((data_in % 100)/10);
