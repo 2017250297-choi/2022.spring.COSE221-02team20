@@ -3,7 +3,7 @@ input rst, clk,start_stop;
 output [6:0] out;
 reg [6:0] out, temp;
 reg new_clk;
-reg [12:0]cnt_clk;
+reg [11:0]cnt_clk;
 
 always@(posedge (clk&start_stop) or negedge rst)
 begin
@@ -19,7 +19,7 @@ begin
       if(cnt_clk == half)
         cnt_clk <=0;
       else if(cnt_clk==0)
-        new_clk = !new_clk;     
+        new_clk <= !new_clk;     
 
     end
 end    
