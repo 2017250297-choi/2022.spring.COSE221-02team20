@@ -22,7 +22,6 @@ begin
         new_clk = !new_clk;     
 
     end
-    
 end    
 
 always@(posedge new_clk or negedge rst) begin 
