@@ -1,9 +1,9 @@
-module cnt0(rst,clk,start_stop,out);
-input rst, clk,start_stop;
+module cnt0(rst,clk,out);
+input rst, clk;
 output [6:0] out;
 reg [6:0] out, temp;
 
-always@(posedge (clk & start_stop) or negedge rst) begin 
+always@(posedge (clk) or negedge rst) begin 
     if(!rst)
     begin
         out <=7'b0000000;

@@ -3,7 +3,7 @@ module tb_cnt0();
 reg rst, clk,start_stop;
 wire out;
 
-cnt0 u0 (rst,clk,start_stop,out);
+cnt0 u0 (rst,clk&start_stop,out);
 
 initial
 begin

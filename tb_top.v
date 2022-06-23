@@ -6,8 +6,7 @@ module tb_top ();
 
     initial begin
         rst=1'b0;
-        #100300; rst=1'b1;
-        #24000000; rst= ~rst;
+        #105; rst=1'b1;
     end
     initial begin
         clk=1'b0;
@@ -15,6 +14,8 @@ module tb_top ();
     end
     initial begin
         start_stop=1'b1;
+        #3100;start_stop= ~start_stop;
+        #3150; start_stop= ~start_stop;
 
     end
 endmodule
