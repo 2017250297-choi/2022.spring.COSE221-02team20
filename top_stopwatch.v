@@ -1,7 +1,7 @@
 module top_stopwatch(rst,clk,start_stop,h10,h1,m10,m1,s10,s1);
     input rst, clk, start_stop;
     output[6:0]h10,h1,m10,m1,s10,s1;
-    reg start,start_temp, start2;
+    reg start_temp, start2;
     wire new_clk;
     wire[6:0]ms_cnt,s_cnt,m_cnt;
 
