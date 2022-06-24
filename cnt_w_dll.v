@@ -3,7 +3,7 @@ input rst, clk;
 output [6:0] out;
 reg [6:0] out, temp;
 reg new_clk;
-reg [11:0]cnt_clk;
+reg [15:0]cnt_clk;
 
 always@(posedge (clk) or negedge rst)
 begin

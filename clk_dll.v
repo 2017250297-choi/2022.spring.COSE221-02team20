@@ -11,7 +11,7 @@ module clk_dll#(parameter half=24999)(rst, clk, out_clk);
     if(!rst)
 	begin
       out_clk <= 0;
-      cnt_clk = 0;
+      cnt_clk <= 0;
     end
     else
 	begin  
@@ -20,7 +20,7 @@ module clk_dll#(parameter half=24999)(rst, clk, out_clk);
       if(cnt_clk == half)
         cnt_clk <=0;
       else if(cnt_clk==0)
-        out_clk = !out_clk;     
+        out_clk <= !out_clk;     
 
     end
     
