@@ -5,12 +5,12 @@ reg [6:0] out, temp;
 reg new_clk;
 reg [15:0]cnt_clk;
 
-always@(posedge (clk) or negedge rst)
+always@(posedge clk or negedge rst)
 begin
     if(!rst)
 	begin
       new_clk <= 0;
-      cnt_clk = 0;
+      cnt_clk <= 0;
     end
     else
 	begin  
